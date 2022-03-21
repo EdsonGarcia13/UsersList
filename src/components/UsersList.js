@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProductsList = ({ products, removeProduct, selectProduct }) => {
+const UsersList = ({ products, removeProduct, selectProduct }) => {
   return (
     <ul className="list-group">
       {products.map((product) => (
@@ -8,16 +8,16 @@ const ProductsList = ({ products, removeProduct, selectProduct }) => {
           
           <ul className="list-group-item d-flex justify-content-between align-items-center">
 
-            <li className="mb-3">
+            <li className="mb-2 mt-2">
               <span>{product.first_name}</span> 
             </li>
-            <li className="mb-3">
+            <li className="mb-2 mt-2">
               <span >{product.last_name}</span>
             </li>
-            <li className="mb-3">
+            <li className="mb-2 mt-2">
               <span>{product.email}</span>
             </li>
-            <li className="mb-3">
+            <li className="mb-2 mt-2">
               <span>{product.birthday}</span>
             </li>
             
@@ -42,4 +42,4 @@ const ProductsList = ({ products, removeProduct, selectProduct }) => {
   );
 };
 
-export default ProductsList;
+export default UsersList;

@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Swal from "sweetalert2";
 
-const ProductsForm = ({
+const UsersForm = ({
   addProduct,
   productEdit,
   updateProduct,
@@ -162,4 +162,4 @@ const ProductsForm = ({
   );
 };
 
-export default ProductsForm;
+export default UsersForm;

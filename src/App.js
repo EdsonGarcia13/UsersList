@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
-import ProductsForm from "./components/ProductsForm";
-import ProductsList from "./components/ProductsList";
+import UsersForm from "./components/UsersForm";
+import UsersList from "./components/UsersList";
 import Swal from "sweetalert2";
 import "./App.css";
 
@@ -56,13 +56,13 @@ function App() {
   return (
     <div className="App">
       
-      <ProductsForm
+      <UsersForm
         addProduct={addProduct}
         productEdit={productEdit}
         selectProduct={selectProduct}
         updateProduct={updateProduct}
       />
-      <ProductsList
+      <UsersList
         products={products}
         removeProduct={removeProduct}
         selectProduct={selectProduct}
