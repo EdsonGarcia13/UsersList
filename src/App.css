@@ -66,16 +66,38 @@ input#name.form-control{
  }
 
  
- .list-group ul{
+ /* .list-group ul {
   border-radius: 40px;
    background-color: rgb(241, 241, 241);
+    width: 60%;
+    display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 5px;
     padding-top: 5px;
     list-style: none;
-  
- }
+ } */
+ 
 
+  .list-group ul {
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  list-style: none;
+  padding: 10px;
+    width: 900px;
+ } 
+   .list-group{
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   list-style: none;
+  }  
+@media (max-width: 730px) {
+  .list-group ul {
+    width: 600px;
+  }
+}
 
  
