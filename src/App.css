@@ -101,3 +101,13 @@ input#name.form-control{
 }
 
  
+@media (max-width: 550px) {
+  .list-group ul {
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    list-style: none;
+    flex-direction: column;
+  }
+}
