@@ -86,6 +86,7 @@ const UsersForm = ({
             aria-label="First name" 
             className="form-control"
             placeholder="First name"
+            required
           />
         </div>
         <div >
@@ -98,6 +99,7 @@ const UsersForm = ({
             aria-label="Last name" 
             className="form-control"
             placeholder="Last name"
+            required
 
           />
         </div>
@@ -114,7 +116,7 @@ const UsersForm = ({
             aria-label="E-mail" 
             className="form-control"
             placeholder="E-mail"
-
+            required
           />
         </div>
 
@@ -128,6 +130,7 @@ const UsersForm = ({
             aria-label="Last name" 
             className="form-control"
             placeholder="Password"
+            required
 
           />
         </div>
@@ -142,6 +145,9 @@ const UsersForm = ({
             aria-label="Last name" 
             className="form-control"
             placeholder="Birthday"
+            required
+            placeholder="Birthday"
+
           />
         </div>
 
