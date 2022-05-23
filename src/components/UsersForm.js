@@ -22,7 +22,8 @@ const UsersForm = ({
       setEmail(productEdit.email);
       setPasword(productEdit.password);
       setBirthday(productEdit.birthday);
-    } else {
+    }
+     else {
       setName("");
       setLastName("");
       setEmail("");
@@ -44,34 +45,27 @@ const UsersForm = ({
       title: "Ready",
       text: "Updated!",
       icon: "success",
+      
   });
+    reset();
     if (productEdit) {
       product.id = productEdit.id;
       updateProduct(product);
     }
-    if (addProduct) {
-      updateProduct(product);
-
-    }
-    if (productEdit && addProduct) {
-      reset(product);
-    }
-    
+  
      else {
       addProduct(product);
-      
+
     } 
   };
   
  
-  const reset = () => {
-    
+  const reset = () => { 
       setName("");
       setLastName("");
       setEmail("");
       setPasword("");
       setBirthday("");
-    
   };
 
 
