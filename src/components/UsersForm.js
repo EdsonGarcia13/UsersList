@@ -50,22 +50,28 @@ const UsersForm = ({
       updateProduct(product);
     }
     if (addProduct) {
+      updateProduct(product);
+
+    }
+    if (productEdit && addProduct) {
       reset(product);
     }
+    
      else {
       addProduct(product);
+      
     } 
   };
   
  
   const reset = () => {
-    if (addProduct) {
+    
       setName("");
       setLastName("");
       setEmail("");
       setPasword("");
       setBirthday("");
-    }
+    
   };
 
 
