@@ -7,6 +7,8 @@ const UsersForm = ({
   addProduct,
   productEdit,
   updateProduct,
+  selectProduct,
+  deselect,
 
 }) => {
   const [name, setName] = useState("");
@@ -41,23 +43,27 @@ const UsersForm = ({
       password: pasword,
       birthday
     };
+    
+
     Swal.fire({
       title: "Ready",
       text: "Updated!",
-      icon: "success",
-      
-  });
-    reset();
+      icon: "success",  
+    });
+    
     if (productEdit) {
       product.id = productEdit.id;
-      updateProduct(product);
+      updateProduct(product);  
+      deselect(product);
     }
-  
-     else {
+   
+    else {
       addProduct(product);
-
     } 
+    reset();
   };
+
+  
   
  
   const reset = () => { 

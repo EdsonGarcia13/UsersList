@@ -44,6 +44,9 @@ function App() {
     setProductEdit(product);
   };
 
+  const deselect = (product) => {
+    setProductEdit(null);
+  };
 
   const updateProduct = (product) => {
     axios
@@ -61,6 +64,7 @@ function App() {
         productEdit={productEdit}
         selectProduct={selectProduct}
         updateProduct={updateProduct}
+        deselect={deselect}
       />
       <UsersList
         products={products}
