@@ -48,25 +48,25 @@ const UsersForm = ({
     if (productEdit) {
       product.id = productEdit.id;
       updateProduct(product);
-    } else {
+    }
+    if (addProduct) {
+      reset(product);
+    }
+     else {
       addProduct(product);
     } 
   };
   
  
   const reset = () => {
-    setName("");
-    setLastName("");
-    setEmail("");
-    setPasword("");
-    setBirthday("");
-    return Swal.fire({
-      title: "Ready!",
-      text: "Cleaned!",
-      icon: "success",
-  });
+    if (addProduct) {
+      setName("");
+      setLastName("");
+      setEmail("");
+      setPasword("");
+      setBirthday("");
+    }
   };
-
 
 
 
@@ -144,7 +144,7 @@ const UsersForm = ({
             value={birthday}
             aria-label="Last name" 
             className="form-control"
-            placeholder="Birthday"
+            
             required
             placeholder="Birthday"
 
@@ -156,11 +156,14 @@ const UsersForm = ({
           value="Upload" 
           className="btn btn-success"
         />
-        <input type="button"
-          value="Clear"
-          onClick={reset}
-          className="btn btn-secondary"
-        />
+        
+        {
+           <input type="button"
+           value="Clear"
+           onClick={reset}
+           className="btn btn-secondary"
+         />
+        }
        
         
       </form>
